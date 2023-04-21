@@ -15,13 +15,13 @@ function greet() {
 
     if (now < 12) {
         greeting = "Good morning !";
-    } else if (now < 18) {
+    } else if (now < 15) {
         greeting = "Good afternoon !";
     } else {
         greeting = "Good evening !";
     }
 
-    window.alert  (greeting +" Here is a simple calculator to help you perform simple arithmetic calculations");
+   alert  (greeting +" Here is a simple calculator to help you perform simple arithmetic calculations,    Enjoy yourself");
 
 }
 greet();
