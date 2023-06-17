@@ -61,3 +61,102 @@
 
 </body>
 </html>
+
+
+
+
+//approach 2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+<!--   <link rel="stylesheet" href="styles.css" > -->
+<style>
+    .container {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="text"] {
+  grid-column: 1 / span 4;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+ #DEL{
+   background-color: darkred;
+ }
+ #clear{
+   background-color: greenyellow;
+ }
+.btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: burlywood;
+}
+</style>
+    
+</head>
+<body>
+
+<div class="container">
+  <h1>Simple calculator in javascript</h1>
+  <div >
+    <input id="display" type="text"readonly >
+  </div>
+  <div class="calculator">
+    
+      <button class="btn" id="DEL" onclick="display.value =display.value.toString().slice(0,-1) ">DEL</button>
+      <button class="btn" id="clear" onclick="display.value ='' ">C</button>
+      <button class="btn" onclick="display.value +='/'">/</button>
+      <button class="btn" onclick="display.value +='%'">%</button>
+      <button class="btn" onclick="display.value +=7">7</button>
+      <button class="btn" onclick="display.value +=8">8</button>
+      <button class="btn" onclick="display.value +=9">9</button>
+      <button class="btn" onclick="display.value +='*'">X</button>
+      <button class="btn" onclick="display.value +=4">4</button>
+      <button class="btn" onclick="display.value +=5">5</button>
+      <button class="btn" onclick="display.value +=6"">6</button>
+      <button class="btn" onclick="display.value +='-'">-</button>
+      <button class="btn" onclick="display.value +=1">1</button>
+      <button class="btn" onclick="display.value +=2">2</button>
+      <button class="btn" onclick="display.value +=3">3</button>
+      <button class="btn" onclick="display.value +='+'">+</button>
+      <button class="btn" onclick="display.value +=0">0</button>
+      <button class="btn" onclick="display.value +='00'">00</button>
+      <button class="btn" onclick="display.value +='.'">.</button>
+      <button class="btn" onclick="display.value=eval(display.value)">=</button>
+  </div>
+</div>
+
+</body>
+</html>
